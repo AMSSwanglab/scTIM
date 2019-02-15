@@ -25,13 +25,13 @@ Then run the following python script
 >>> import scTIM
 
 >>> file_name = 'scTIM/Package/data.txt' ### Defining file name
->>> alpha = 0.1;beta = 0.4;gamma = 0.5;                                        ### Setting Parameters
+>>> alpha = 0.1;beta = 0.4;gamma = 0.5;                                       ### Setting Parameters
 >>> data,gene = scTIM.PreProcess(file_name,'y')                               ### Preprocessing data
 >>> p = scTIM.CellRedMatrix(data)                                             ### Computing cell-cell distance matrix
 >>> fs = scTIM.GeneSpecificity(data)                                          ### Computing gene specificity
 >>> red = scTIM.GeneRedMatrix(data)                                           ### Computing gene-gene redundancy matrix
 >>> w = scTIM.ExtractGene(data,p,red,alpha,beta,gamma)                        ### Identifying markers by simulating annealing
->>> marker = [gene[i] for i in range(data.shape[0]) if w[i] == 1]              ### Output the marker set
+>>> marker = [gene[i] for i in range(data.shape[0]) if w[i] == 1]             ### Output the marker set
 ```
 For more robust solution, we repeat the simulating annealing for 10 times and use the inersection of 10 outcomes as final result and these 10 repeats can be conducted by parallel computing:
 ```python
@@ -45,7 +45,7 @@ For more robust solution, we repeat the simulating annealing for 10 times and us
 >>> w8 = scTIM.ExtractGene(data,p,red,alpha,beta,gamma)
 >>> w9 = scTIM.ExtractGene(data,p,red,alpha,beta,gamma)
 >>> w10 = scTIM.ExtractGene(data,p,red,alpha,beta,gamma) 
->>> w = (np.sum([w1,w2,w3,w4,w5,w6,w7,w8,w9,w10],0)==10).astype('int')         ### Intersection
+>>> w = (np.sum([w1,w2,w3,w4,w5,w6,w7,w8,w9,w10],0)==10)                       ### Intersection
 >>> marker = [gene[i] for i in range(data.shape[0]) if w[i] == 1]              ### Output the marker set
 ```
 ## Requirements:
