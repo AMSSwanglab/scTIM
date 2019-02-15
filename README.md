@@ -14,7 +14,7 @@ o: Output file
 a: Need(y) or needn't(n) log-normalization
 ```
 ## Package usage example:
-First open a python shell:
+First open a python IDE:
 ```bash
 cd Package
 python
