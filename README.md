@@ -33,7 +33,7 @@ Then run the following python script
 >>> w = scTIM.ExtractGene(data,p,red,alpha,beta,gamma)                        ### Identifying markers by simulating annealing
 >>> marker = [gene[i] for i in range(data.shape[0]) if w[i] == 1]              ### Output the marker set
 ```
-We suggest the users repeat the simulating annealing for 10 times and use the inersection of 10 outcomes as final result and these 10 repeats can be conducted by parallel computing:
+For more robust solution, we repeat the simulating annealing for 10 times and use the inersection of 10 outcomes as final result and these 10 repeats can be conducted by parallel computing:
 ```python
 >>> w1 = scTIM.ExtractGene(data,p,red,alpha,beta,gamma)
 >>> w2 = scTIM.ExtractGene(data,p,red,alpha,beta,gamma)
