@@ -1,18 +1,7 @@
 # scTIM
 ## Introduction
 A convenient tool for marker detection based on single cell RNA-seq data. <br>
-There are two kinds of usage of scTIM: command line software and package. <br>
 
-## Command line usage example:
-```bash
-cd Scripts
-python scTIM.py -p 0.1,0.4,0.5 -i data.txt -o outcome.txt -a y
-
-p: Parameters of scTIM
-i: Input data file; Every row is gene and column is cell, delimitered by '\t'
-o: Output file
-a: Need(y) or needn't(n) log-normalization
-```
 ## Package usage example:
 First open a python IDE:
 ```bash
