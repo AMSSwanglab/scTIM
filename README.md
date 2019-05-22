@@ -13,7 +13,7 @@ Then run the following python script
 >>> import numpy as np
 >>> import scTIM
 
->>> file_name = 'scTIM/Package/data.txt' ### Defining file name
+>>> file_name = 'scTIM/Package/data.txt'                                      ### Defining file name
 >>> alpha = 0.1;beta = 0.4;gamma = 0.5;                                       ### Setting Parameters
 >>> data,gene = scTIM.PreProcess(file_name,'y')                               ### Preprocessing data
 >>> p = scTIM.CellRedMatrix(data)                                             ### Computing cell-cell distance matrix
