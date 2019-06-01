@@ -5,6 +5,7 @@ A convenient tool for marker detection based on single cell RNA-seq data. <br>
 ## Installation
 ```bash
 pip install sc_tim
+```
 
 ## Usage example:
 
