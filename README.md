@@ -20,21 +20,21 @@ Then run the following python script
 >>> p = sc_tim.CellRedMatrix(data)                                             ### Computing cell-cell distance matrix
 >>> fs = sc_tim.GeneSpecificity(data)                                          ### Computing gene specificity
 >>> red = sc_tim.GeneRedMatrix(data)                                           ### Computing gene-gene redundancy matrix
->>> w = sc_tim.ExtractGene(data,p,red,alpha,beta,gamma)                        ### Identifying markers by simulating annealing
+>>> w = sc_tim.ExtractGene(data,fs,p,red,alpha,beta,gamma)                        ### Identifying markers by simulating annealing
 >>> marker = [gene[i] for i in range(data.shape[0]) if w[i] == 1]             ### Output the marker set
 ```
 For more robust solution, we repeat the simulating annealing for 10 times and use the inersection of 10 outcomes as final result and these 10 repeats can be conducted by parallel computing:
 ```python
->>> w1 = sc_tim.ExtractGene(data,p,red,alpha,beta,gamma)
->>> w2 = sc_tim.ExtractGene(data,p,red,alpha,beta,gamma)
->>> w3 = sc_tim.ExtractGene(data,p,red,alpha,beta,gamma)
->>> w4 = sc_tim.ExtractGene(data,p,red,alpha,beta,gamma)
->>> w5 = sc_tim.ExtractGene(data,p,red,alpha,beta,gamma)
->>> w6 = sc_tim.ExtractGene(data,p,red,alpha,beta,gamma)
->>> w7 = sc_tim.ExtractGene(data,p,red,alpha,beta,gamma)
->>> w8 = sc_tim.ExtractGene(data,p,red,alpha,beta,gamma)
->>> w9 = sc_tim.ExtractGene(data,p,red,alpha,beta,gamma)
->>> w10 = sc_tim.ExtractGene(data,p,red,alpha,beta,gamma) 
+>>> w1 = sc_tim.ExtractGene(data,fs,p,red,alpha,beta,gamma)
+>>> w2 = sc_tim.ExtractGene(data,fs,p,red,alpha,beta,gamma)
+>>> w3 = sc_tim.ExtractGene(data,fs,p,red,alpha,beta,gamma)
+>>> w4 = sc_tim.ExtractGene(data,fs,p,red,alpha,beta,gamma)
+>>> w5 = sc_tim.ExtractGene(data,fs,p,red,alpha,beta,gamma)
+>>> w6 = sc_tim.ExtractGene(data,fs,p,red,alpha,beta,gamma)
+>>> w7 = sc_tim.ExtractGene(data,fs,p,red,alpha,beta,gamma)
+>>> w8 = sc_tim.ExtractGene(data,fs,p,red,alpha,beta,gamma)
+>>> w9 = sc_tim.ExtractGene(data,fs,p,red,alpha,beta,gamma)
+>>> w10 = sc_tim.ExtractGene(data,fs,p,red,alpha,beta,gamma) 
 >>> w = (np.sum([w1,w2,w3,w4,w5,w6,w7,w8,w9,w10],0)==10)                       ### Intersection
 >>> marker = [gene[i] for i in range(data.shape[0]) if w[i] == 1]              ### Output the marker set
 ```
