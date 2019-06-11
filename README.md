@@ -14,7 +14,7 @@ Then run the following python script
 import numpy as np
 import sc_tim
 
-if __name__ == "__main__":                                                  ### This command is necessary in Windows System
+if __name__ == "__main__":                                                  ### This command is necessary for Windows System
   file_name = 'scTIM-master/Package/data.txt'                               ### Defining file name
   alpha = 0.1;beta = 0.4;gamma = 0.5;                                       ### Setting Parameters
   data,gene = sc_tim.PreProcess(file_name,'y')                              ### Preprocessing data
