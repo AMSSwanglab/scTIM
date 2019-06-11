@@ -40,6 +40,7 @@ For more robust solution, we repeat the simulating annealing for 10 times and us
 ```
 
 ## Requirements:
+Operating system: Linux (strongly recommended but not necessary) <br>
 Python environment: python 3 <br>
 numpy <br>
 Memory >= 3.0 Gb
