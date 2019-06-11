@@ -11,7 +11,7 @@ pip install sc_tim
 
 Then run the following python script
 ```python
->>> import numpy as np
+import numpy as np
 >>> import sc_tim
 
 >>> file_name = 'scTIM-master/Package/data.txt'                                      ### Defining file name
