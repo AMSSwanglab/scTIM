@@ -43,5 +43,5 @@ marker = [gene[i] for i in range(data.shape[0]) if w[i] == 1]              ### O
 ## Requirements:
 Operating system: Linux (strongly recommended but not necessary) <br>
 Python environment: python 3 <br>
-numpy <br>
-Memory >= 3.0 Gb
+Python package: numpy <br>
+Memory: >= 3.0 Gb
