@@ -41,8 +41,13 @@ w = (np.sum([w1,w2,w3,w4,w5,w6,w7,w8,w9,w10],0)==10)                       ### I
 marker = [gene[i] for i in range(data.shape[0]) if w[i] == 1]              ### Output the marker set
 ```
 
-## Requirements:
+## Requirements
 Operating system: Linux (strongly recommended but not necessary) <br>
 Python environment: python 3 <br>
 Python package: numpy <br>
 Memory: >= 3.0 Gb
+
+## Citation
+If you use scTIM or scTIM associated concepts, please cite
+
+Zhanying, et al. scTIM: seeking cell-type-indicative marker from single cell RNA-seq data by consensus optimization. Bioinformatics, 2020.
