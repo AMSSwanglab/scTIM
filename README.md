@@ -50,4 +50,4 @@ Memory: >= 3.0 Gb
 ## Citation
 If you use scTIM or scTIM associated concepts, please cite
 
-[Zhanying, et al. scTIM: seeking cell-type-indicative marker from single cell RNA-seq data by consensus optimization. Bioinformatics, 2020.(https://academic.oup.com/bioinformatics/article-abstract/36/8/2474/5679774?redirectedFrom=fulltext)]
+[Zhanying, et al. scTIM: seeking cell-type-indicative marker from single cell RNA-seq data by consensus optimization. Bioinformatics, 2020.](https://academic.oup.com/bioinformatics/article-abstract/36/8/2474/5679774?redirectedFrom=fulltext)
